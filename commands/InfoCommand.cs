@@ -14,11 +14,11 @@ public class InfoCommand : IExecutable
         bool internet = Utils.IsInternetAvailable();
 
         AnsiConsole.MarkupLine("");
-        AnsiConsole.MarkupLine($"Local IP ....: [cyan]{localIp ?? "[grey]<unknown>[/]"}[/]");
-        AnsiConsole.MarkupLine($"Public IP ...: [cyan]{publicIpInfo?.ip ?? "[grey]<unknown>[/]"}[/]");
-        AnsiConsole.MarkupLine($"Location ....: [cyan]{(publicIpInfo != null ? $"{publicIpInfo.CountryFriendly}, {publicIpInfo.region}" : "[grey]<unknown>[/]")}[/]");
-        AnsiConsole.MarkupLine($"Organization : [cyan]{publicIpInfo?.org ?? "[grey]<unknown>[/]"}[/]");
-        AnsiConsole.MarkupLine($"Network .....: {(hasNetwork ? "[green]yes" : "[red]no")}[/]");
-        AnsiConsole.MarkupLine($"Internet ....: {(internet ? "[green]yes" : "[red]no")}[/]");
+        AnsiConsole.MarkupLine($"Local IP ......: [cyan]{localIp ?? "[grey]<unknown>[/]"}[/]");
+        AnsiConsole.MarkupLine($"Public IP .....: [cyan]{publicIpInfo?.ip ?? "[grey]<unknown>[/]"}[/]");
+        AnsiConsole.MarkupLine($"Location ......: [cyan]{(publicIpInfo != null ? $"{publicIpInfo.CountryFriendly}, {publicIpInfo.region}" : "[grey]<unknown>[/]")}[/]");
+        AnsiConsole.MarkupLine($"Organization ..: [cyan]{publicIpInfo?.org ?? "[grey]<unknown>[/]"}[/]");
+        AnsiConsole.MarkupLine($"Network .......: {(hasNetwork ? "[green]yes" : "[red]no")}[/]");
+        AnsiConsole.MarkupLine($"Internet ......: {(internet ? "[green]yes" : "[red]no")}[/]");
     }
 }
